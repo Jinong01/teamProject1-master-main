@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--
+    namespace:名称空间
+-->
+<mapper namespace="com.koreait.coffee.model.mapper.ShoppingCartMapper">
+    <insert id="insertShoppingCart">
+        insert into shopping_cart(user_id, dish_id, amount, number, type, create_time,temperature,shot)
+        values (#{userId},#{dishId},#{amount},#{number},#{type},#{createTime},#{temperature},#{shot}) ;
+    </insert>
+    <update id="updateShoppingCartByDishId">
+        update shopping_cart
+        <set>
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="dishId != null">
+                dish_id = #{dishId},
+            </if>
+            <if test="amount != null">
+                amount = #{amount},
+            </if>
+            <if test="number != null">
+                number = #{number},
+            </if>
+            <if test="type != null">
+                type = #{type},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="temperature != null">
+                temperature = #{temperature},
+            </if>
+            <if test="shot != null">
+                shot = #{shot}
+            </if>
+        </set>
+        where dish_id = #{dishId};
+    </update>
+    <update id="updateAmount" > <!--shopping_cart 에 담은 dish 별로 가격 연산-->
+        UPDATE shopping_cart s
+        JOIN dish d ON s.dish_id = d.id
+        SET s.amount = CAST((d.price * s.number) AS DOUBLE)
+        where s.id>0;
+    </update>
+
+    <select id="getOrderAmount" resultType="double">
+        select sum(amount) from shopping_cart
+    </select>
+
+    <select id="getShoppingCart">
+        select * from shopping_cart where dish_id = #{dishId} and temperature = #{temperature} and shot = #{shot}
+    </select>
+
+</mapper>
