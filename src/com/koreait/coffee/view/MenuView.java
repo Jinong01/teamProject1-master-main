@@ -152,7 +152,7 @@ public class MenuView {
             dishFlavor.setTemperature(orderView.temperatureView());
             return dishFlavor;
         }
-        return null;
+        return dishFlavor;
     }
 }
 

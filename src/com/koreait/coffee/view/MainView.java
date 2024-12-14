@@ -3,13 +3,14 @@ package com.koreait.coffee.view;
 import com.koreait.coffee.controller.CategoryController;
 import com.koreait.coffee.controller.DishController;
 import com.koreait.coffee.controller.ShoppingCartController;
+import com.koreait.coffee.model.dto.Order;
 import com.koreait.coffee.model.dto.Type;
 import java.util.Scanner;
 public class MainView {
     public MenuView menuView = new MenuView();
     public Scanner sc = new Scanner(System.in);
     public static Type type = null;
-
+    public static Order order;
     // 선근호 11-29 21:14 수정
     public void mainView() {
         while (true){
