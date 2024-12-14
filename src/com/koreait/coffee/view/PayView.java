@@ -22,7 +22,7 @@ public class PayView {
 
     public void paySuccess() {
         System.out.println("결제 성공");
-        orderController.addOrderDetail();
+        orderController.addOrderDetail();              // 결제성공하면 장바구니에 담겨있던 항목들 orderDetail 에 담기
         shoppingCartController.deleteAllShoppingCart();// 결제성공하면 장바구니 삭제
     }
 

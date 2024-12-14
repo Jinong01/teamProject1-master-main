@@ -83,7 +83,7 @@ public class MenuView {
             Dish dish ;
             switch (choose) {
                 case 1,2,3,4 :
-                    dishFlavor = setDishFlavor(categoryId);
+                    dishFlavor = setDishFlavor(categoryId);         // 선택한 카테고리 번호에 따라 온도/샷 설정하는 단계로 이동
                     dish = dishesByCategoryId.get(choose-1);        // 선택한 choose 값의 dishId 대입
                     shoppingCartController.add(dish,dishFlavor.getTemperature(),dishFlavor.getShot());     // 완성한 커피를 장바구니에 담기
                     break;
@@ -144,15 +144,15 @@ public class MenuView {
 
     public DishFlavor setDishFlavor(Integer categoryId){
         DishFlavor dishFlavor = new DishFlavor();
-        if (categoryId == 1 ){
-            dishFlavor.setTemperature(orderView.temperatureView());
-            dishFlavor.setShot(orderView.shotView());
+        if (categoryId == 1 ){                                          // 카테고리1 커피 선택 시
+            dishFlavor.setTemperature(orderView.temperatureView());     // 온도 설정 뷰
+            dishFlavor.setShot(orderView.shotView());                   // 샷 설정 뷰
             return dishFlavor;
-        }else if(categoryId == 2 || categoryId == 3){
-            dishFlavor.setTemperature(orderView.temperatureView());
+        }else if(categoryId == 2 || categoryId == 3){                   // 2티 3에이드 선택 시
+            dishFlavor.setTemperature(orderView.temperatureView());     // 티랑 에이드는 샷이 없으므로 null 로 설정하고 온도 설정 뷰만
             return dishFlavor;
         }
-        return dishFlavor;
+        return dishFlavor;  // 4디저트는 온도/샷 null 로 설정
     }
 }
 
