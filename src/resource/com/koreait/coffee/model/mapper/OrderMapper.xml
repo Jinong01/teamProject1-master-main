@@ -4,10 +4,11 @@
 <!--
     namespace:名称空间
 -->
+
 <mapper namespace="com.koreait.coffee.model.mapper.OrderMapper">
     <insert id="addOrders">
         insert into orders
-        (userid , status , order_time , pay_method , pay_status ,
+        (user_id , status , order_time , pay_method , pay_status ,
         end_time, amount, cancel_reason, rejection_reason , cancel_time , point )
         values (#{userId} , #{status} , #{orderTime} , #{payMethod} , #{payStatus} ,
         #{endTime} , #{amount}, #{cancelReason}, #{rejectionReason} , #{cancelTime} , #{point});
@@ -25,7 +26,7 @@
                 order_time = #{orderTime},
             </if>
             <if test="pay_method != null">
-                order_time = #{orderTime},
+                pay_method = #{payMethod},
             </if>
             <if test="pay_status != null">
                 pay_status = #{payStatus},
@@ -50,9 +51,17 @@
         delete from orders where id = #{id}
     </delete>
 
+    <select id="nowOrder" resultType="order">
+        select * from orders order by id desc limit 1;
+    </select>
+
     <insert id="addOrderDetail">
         insert into order_detail
         (name, order_id, dish_id, number, price)
         values (#{name}, #{orderId}, #{dishId}, #{number}, #{price})
     </insert>
+
+    <delete id="deleteOrderDetail">
+        delete from order_detail where id>0;
+    </delete>
 </mapper>

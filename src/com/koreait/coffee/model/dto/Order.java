@@ -10,14 +10,14 @@ public class Order {
     private LocalDateTime orderTime;
     private Integer payMethod;
     private Integer payStatus;
-    private LocalDate endTime;
+    private LocalDateTime endTime;
     private Double amount;
     private String cancelReason;
     private String rejectionReason;
     private LocalDateTime cancelTime;
     private Double point;
 
-    public Order(Integer id, Integer userId, Integer status, LocalDateTime orderTime, Integer payMethod, Integer payStatus, LocalDate endTime, Double amount, String cancelReason, String rejectionReason, LocalDateTime cancelTime, Double point) {
+    public Order(Integer id, Integer userId, Integer status, LocalDateTime orderTime, Integer payMethod, Integer payStatus, LocalDateTime endTime, Double amount, String cancelReason, String rejectionReason, LocalDateTime cancelTime, Double point) {
         this.id = id;
         this.userId = userId;
         this.status = status;
@@ -67,13 +67,9 @@ public class Order {
         this.status = status;
     }
 
-    public LocalDateTime getOrderTime() {
-        return orderTime;
-    }
+    public LocalDateTime getOrderTime() {return orderTime;}
 
-    public void setOrderTime(LocalDateTime orderTime) {
-        this.orderTime = orderTime;
-    }
+    public void setOrderTime(LocalDateTime orderTime) {this.orderTime = orderTime;}
 
     public Integer getPayMethod() {
         return payMethod;
@@ -91,11 +87,11 @@ public class Order {
         this.payStatus = payStatus;
     }
 
-    public LocalDate getEndTime() {
+    public LocalDateTime getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(LocalDate endTime) {
+    public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
     }
 

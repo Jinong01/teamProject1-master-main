@@ -23,4 +23,8 @@
         </set>
         where id=#{id}
     </update>
+
+    <select id="getUserByPhoneNumber" resultType="User">
+        select * from user where phone_number = #{phone_number}
+    </select>
 </mapper>

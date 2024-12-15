@@ -10,7 +10,7 @@ public class MainView {
     public MenuView menuView = new MenuView();
     public Scanner sc = new Scanner(System.in);
     public static Type type = null;
-    public static Order order;
+
     // 선근호 11-29 21:14 수정
     public void mainView() {
         while (true){

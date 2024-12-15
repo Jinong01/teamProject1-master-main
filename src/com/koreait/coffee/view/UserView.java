@@ -9,6 +9,7 @@ public class UserView {
 public Scanner sc = new Scanner(System.in);
 public UserController userController = new UserController();
 public static User loginUser;
+
     public void signIn(Double point , Double amount){
         while (true){
             System.out.println("  1.포인트 적립  2.포인트 사용  3.적립안함");
@@ -53,6 +54,7 @@ public static User loginUser;
                     }
                     return;
                 case 3:
+                    User user = new User();
                     return;
             }
         }

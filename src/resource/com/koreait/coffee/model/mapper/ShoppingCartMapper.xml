@@ -50,7 +50,7 @@
         select sum(amount) from shopping_cart
     </select>
 
-    <select id="getShoppingCart">
+    <select id="getShoppingCart" resultType="shoppingCart">
         select * from shopping_cart where dish_id = #{dishId} and temperature = #{temperature} and shot = #{shot}
     </select>
 

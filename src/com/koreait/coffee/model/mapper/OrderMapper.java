@@ -11,7 +11,13 @@ public interface OrderMapper {
     @Select("select * from orders")
     List<Order> getAllOder();
 
-    void addOrders();
+    void addOrders(Order order);
+
+//    void updateOrders(Order order);
 
     void addOrderDetail(OrderDetail orderDetail);
+
+    void deleteOrderDetail();
+
+    Order nowOrder();
 }
