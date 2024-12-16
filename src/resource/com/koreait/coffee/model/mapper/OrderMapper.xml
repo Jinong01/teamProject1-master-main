@@ -22,22 +22,22 @@
             <if test="status != null">
                 status = #{status},
             </if>
-            <if test="order_time != null">
+            <if test="orderTime != null">
                 order_time = #{orderTime},
             </if>
-            <if test="pay_method != null">
+            <if test="payMethod != null">
                 pay_method = #{payMethod},
             </if>
-            <if test="pay_status != null">
+            <if test="payStatus != null">
                 pay_status = #{payStatus},
             </if>
-            <if test="end_time != null">
+            <if test="endTime != null">
                 end_time = #{endTime},
             </if>
             <if test="amount != null">
                 amount = #{amount},
             </if>
-            <if test="cancel_reason != null">
+            <if test="cancelReason != null">
                 cancel_reason = #{cancelReason},
             </if>
             <if test="point != null">

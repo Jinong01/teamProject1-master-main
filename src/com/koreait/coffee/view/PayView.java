@@ -25,7 +25,7 @@ public class PayView {
         orderController.addOrderDetail();              // 결제성공하면 장바구니에 담겨있던 항목들 orderDetail 에 담기
         shoppingCartController.deleteAllShoppingCart();// 결제성공하면 장바구니 삭제
 //        orderController.deleteOrderDetail();           // 결제성공하면 orderDetail 삭제
-//        orderController.updateOrders();              // 결제성공 후 결제상태 결제 완료로 변경
+        orderController.updateOrders();              // 결제성공 후 결제상태 결제 완료로 변경
     }
 
     public void mainView(){                             // 다시 초기화면으로
