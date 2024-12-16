@@ -152,7 +152,6 @@ public class MenuView {
                     LocalDateTime time = LocalDateTime.now();
                     orderController.addOrders(point,amount,time);    // 주문내역 추가
                     payView.paySuccess();                       // 적립 여부 끝나면 결제 성공 창
-//                    orderController.updateOrders();
                     payView.mainView();                         // 결제성공 후 다시 메인 화면으로
                     return;
                 case 2:

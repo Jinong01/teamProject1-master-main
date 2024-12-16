@@ -23,7 +23,7 @@ public static User loginUser;
             }
             switch (choose){
                 case 1:
-                    System.out.println("핸드폰번호를 입력하세요:");                      // 카페 키오스크에선 핸드폰번호로만으로 포인트 등록, 이름은 나중에 어플로
+                    System.out.println("핸드폰번호를 입력하세요: - 제외하고 입력하세요.");                      // 카페 키오스크에선 핸드폰번호로만으로 포인트 등록, 이름은 나중에 어플로
                     String phoneNumber = sc.next();
                         if (userController.getUserByPhoneNumber(phoneNumber)==null){ // 입력한 번호로 등록된 회원이 없으면
                             User user = new User();                                  // 새로운 user 를 만들어서
@@ -37,7 +37,7 @@ public static User loginUser;
                         } return;
 
                 case 2:
-                    System.out.println("핸드폰번호를 입력하세요:");
+                    System.out.println("핸드폰번호를 입력하세요: - 제외하고 입력하세요.");
                     String phoneNumber1 = sc.next();
                     if (userController.getUserByPhoneNumber(phoneNumber1)==null){  // 등록된 회원이 없으면
                         System.out.println("동록되지 않은 회원입니다.");
