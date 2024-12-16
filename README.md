@@ -19,3 +19,4 @@
 김진홍 : dish/shoppingcart/order controller 담당
 
 선근호 : Dto설계 및 View 담당
+![ERD.png](ERD.png)
