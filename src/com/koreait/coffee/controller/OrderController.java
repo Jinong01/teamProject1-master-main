@@ -26,10 +26,10 @@ public class OrderController {
         order.setStatus(1); order.setPayStatus(2);
         mapper.addOrders(order);}
 
-//    public void updateOrders(){
-//        Order order = mapper.nowOrder();
-//        order.setPayStatus(1); order.setEndTime(LocalDateTime.now());
-//        mapper.updateOrders(order);}
+    public void updateOrders(){
+        Order order = mapper.nowOrder();
+        order.setPayStatus(1); order.setEndTime(LocalDateTime.now());
+        mapper.updateOrders(order);}
 
     public  void addOrderDetail(){
         List<ShoppingCart> shoppingCartList2 = shoppingCartController.getAllShoppingCart();

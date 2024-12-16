@@ -13,7 +13,7 @@ public interface OrderMapper {
 
     void addOrders(Order order);
 
-//    void updateOrders(Order order);
+    void updateOrders(Order order);
 
     void addOrderDetail(OrderDetail orderDetail);
 
