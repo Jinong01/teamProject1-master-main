@@ -169,9 +169,11 @@ public class MenuView {
             dishFlavor.setTemperature(orderView.temperatureView());     // 온도 설정 뷰
             dishFlavor.setShot(orderView.shotView());                   // 샷 설정 뷰
             return dishFlavor;
-        }else if(categoryId == 2 || categoryId == 3){                   // 2티 3에이드 선택 시
+        }else if(categoryId == 2){                                      // 2티 선택 시
             dishFlavor.setTemperature(orderView.temperatureView());     // 티랑 에이드는 샷이 없으므로 null 로 설정하고 온도 설정 뷰만
             return dishFlavor;
+        } else if (categoryId == 3) {                                   // 3에이드 선택 시
+            dishFlavor.setTemperature(Temperature.ICE);                 // 에이드는 샷이 없고 무조건 ice 로 설정
         }
         return dishFlavor;  // 4디저트는 온도/샷 null 로 설정
     }
