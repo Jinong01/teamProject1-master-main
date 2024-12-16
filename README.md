@@ -12,10 +12,10 @@ Coffee Kiosk
 
 -팀원-
 
-조정우 : 설계 담당
-김유나 : user 관련 user 등록, 포인트적립 및 사용 controller 담당
-김진홍 : dish/shoppingcart/order controller 담당
-선근호 : Dto설계 및 View 담당
+- 조정우 : 설계 담당
+- 김유나 : user 관련 user 등록, 포인트적립 및 사용 controller 담당
+- 김진홍 : dish/shoppingcart/order controller 담당
+- 선근호 : Dto설계 및 View 담당
 
 <img alt="ERD.png" height="800" src="ERD.png" width="1000"/>
 
