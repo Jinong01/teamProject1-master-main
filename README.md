@@ -1,4 +1,4 @@
-카페 키오스크
+Coffee Kiosk
 
 키오스크를 통한 편리한 주문 및 포인트 적립
 
@@ -13,11 +13,8 @@
 -팀원-
 
 조정우 : 설계 담당
-
 김유나 : user 관련 user 등록, 포인트적립 및 사용 controller 담당
-
 김진홍 : dish/shoppingcart/order controller 담당
-
 선근호 : Dto설계 및 View 담당
 
 <img alt="ERD.png" height="800" src="ERD.png" width="1000"/>
