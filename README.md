@@ -21,3 +21,5 @@
 선근호 : Dto설계 및 View 담당
 
 <img alt="ERD.png" height="800" src="ERD.png" width="1000"/>
+
+구현 영상 : https://youtu.be/FIodM0b4syg
